@@ -1,0 +1,201 @@
+@use "./mixins";
+
+.green {
+    color: #fff !important;
+    background-color: #008000 !important;
+
+    &:hover {
+        color: #008000 !important;
+        background-color: #fff !important;
+    }
+}
+
+.home-section {
+    width: 100%;
+
+    &::before {
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 98rem;
+        margin: auto;
+
+        position: relative;
+        padding-top: 5rem;
+
+        @include mixins.flex(flex, center, column, none);
+
+        @include mixins.md(768px) {
+            width: 95%;
+        }
+
+        .page-title {
+            @include mixins.stylePageTitle(5rem, none, #fff);
+            font-weight: bold;
+
+            span {
+                color: #e50914;
+            }
+
+            @include mixins.md(425px) {
+                font-size: 4rem;
+            }
+
+            @include mixins.md(320px) {
+                font-size: 3rem;
+            }
+        }
+
+        .page-subtitle {
+            @include mixins.stylePageTitle(2rem, 1rem, #fff);
+
+            @include mixins.md(425px) {
+                font-size: 1.8rem;
+            }
+
+            @include mixins.md(320px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .container-form {
+            width: 100%;
+
+            @include mixins.flex(flex, center, none, center);
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+
+            @include mixins.md(425px) {
+                width: 95%;
+            }
+
+            .input-text {
+                @include mixins.styleInputButtons(50rem, 4rem, 1.3rem, 0.2rem);
+                padding: 0 1rem;
+
+                outline: none;
+                border: none;
+
+                &::placeholder {
+                    color: #e50914;
+                }
+
+                @include mixins.md(768px) {
+                    width: 40rem;
+                }
+
+                @include mixins.md(425px) {
+                    font-size: 1.2rem;
+                }
+
+                @include mixins.md(375px) {
+                    height: 3.5rem;
+                }
+
+                @include mixins.md(320px) {
+                    font-size: 1.1rem;
+                }
+            }
+
+            .btn-submit {
+                @include mixins.styleInputButtons(15rem, 4rem, 1.3rem, 0.2rem);
+
+                cursor: pointer;
+                border: none;
+                transition: 0.3s;
+                color: #fff;
+                background-color: #e50914;
+
+                &:hover {
+                    color: #e50914;
+                    background-color: #fff;
+                }
+
+                @include mixins.md(425px) {
+                    width: 14rem;
+                    height: 3.5rem;
+                    font-size: 1.2rem;
+                }
+
+                @include mixins.md(375px) {
+                    height: 3rem;
+                }
+
+                @include mixins.md(320px) {
+                    width: 13rem;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+
+        .title-info-films {
+            width: 100%;
+            @include mixins.stylePageTitle(2rem, 2rem, #fff);
+
+            @include mixins.md(425px) {
+                font-size: 1.6rem;
+            }
+
+            @include mixins.md(375px) {
+                font-size: 1.8rem;
+            }
+
+            @include mixins.md(320px) {
+                font-size: 1.4rem;
+            }
+        }
+
+        .glide {
+            width: 100%;
+            text-align: center;
+
+            .element-h2-style-list {
+                @include mixins.stylePageTitle(2.5rem, none, #fff);
+
+                @include mixins.md(425px) {
+                    font-size: 2rem;
+                }
+
+                @include mixins.md(375px) {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .glide__track {
+                .glide__slides {
+                    width: 100%;
+
+                    @include mixins.flex(flex, center, none, center);
+
+                    .glide__slide {
+                        flex: 1;
+                        height: 25rem;
+
+                        
+                        @include mixins.flex(flex, center, none, center);
+                        
+                        img {
+                            border-radius: 1rem;
+                            width: 19rem;
+                            height: 25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+
+    background-image: url("http://s2.glbimg.com/aGNPBQMhS5sWfd6kkqAzAxY8ekE=/e.glbimg.com/og/ed/f/original/2014/10/28/interstellar.jpg");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

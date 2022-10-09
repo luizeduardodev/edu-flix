@@ -1,0 +1,25 @@
+@mixin flex($display, $align, $direction, $justify) {
+    display: $display;
+    align-items: $align;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+@mixin stylePageTitle($fontSize, $marginBottom, $color) {
+    font-size: $fontSize;
+    margin-bottom: $marginBottom;
+    color: $color;
+}
+
+@mixin styleInputButtons($width, $height, $fontSize, $borderRadius) {
+    width: $width;
+    height: $height;
+    font-size: $fontSize;
+    border-radius: $borderRadius;
+}
+
+@mixin md($widht: 0) {
+    @media screen and (max-width: $widht) {
+        @content;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>EduFlix</title>
+
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Glider.js -->
+        <link
+            rel="stylesheet"
+            href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+        />
+        <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+        <link rel="stylesheet" href="./assets/css/style.min.css" />
+    </head>
+
+    <body>
+        <main>
+            <section class="home-section">
+                <div class="wrapper">
+                    <h1 class="page-title">Edu<span>Flix</span></h1>
+                    <h2 class="page-subtitle">
+                        Adicione os seus filmes favoritos!
+                    </h2>
+
+                    <form class="container-form">
+                        <input
+                            type="text"
+                            id="input-text"
+                            class="input-text"
+                            placeholder="Insira a url do poster do filme..."
+                        />
+                        <button
+                            type="submit"
+                            id="btn-submit"
+                            class="btn-submit"
+                        >
+                            Adicionar Filme
+                        </button>
+
+                        <button id="btn-clear" class="btn-submit green">
+                            Apagar lista
+                        </button>
+                    </form>
+
+                    <h2 class="title-info-films">° Lista de filmes salvos:</h2>
+
+                    <div class="glide">
+                        <div class="glide__track" data-glide-el="track">
+                            <ul class="glide__slides"></ul>
+
+                            <div class="glide__arrows" data-glide-el="controls">
+                                <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                                <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/glider.js"></script>
+    </body>
+</html>
